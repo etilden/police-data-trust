@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    background-color: lightblue;
+    height: 5rem;
+}
+
+
+/* to be deleted */
+.theWholeDangThing { 
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+}
+/* --------------- */
+
+.userProfile {
+    display: flex;
+    height: 80%;
+    margin: 5rem 5rem 4rem 5rem;
+    background-color: lightgoldenrodyellow;
+}
+
+@media screen and (max-width: 32em) {
+    .userProfile {
+        display: inline;
+        background-color: lightgoldenrodyellow;
+    }
+  }

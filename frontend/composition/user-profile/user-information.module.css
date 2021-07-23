@@ -1,0 +1,12 @@
+.displayLeft {
+    float: left;
+}
+
+.displayRight {
+    float: right;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
