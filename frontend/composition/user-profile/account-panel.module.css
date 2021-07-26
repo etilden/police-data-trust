@@ -1,18 +1,18 @@
-
 .accountPanel {
-    float: left;
-    background-color: White;
-    border-radius: 20px;
-    border: 1px solid #666666;
-    margin: 5rem 0.5rem 4rem 5rem;
-    padding: 1rem;
-    width: 25rem;
+  float: left;
+  background-color: White;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 1px #666666;
+  border: 1px solid #666666;
+  margin: 5rem 0.5rem 4rem 5rem;
+  padding: 2rem;
+  width: 25rem;
 }
 
 .separatingLine {
-    margin: 1rem 0;
-    color: #666666;
-    background-color: #666666;
-    border-width: 0;
-    height: 2px;
+  margin-bottom: 1rem;
+  color: #666666;
+  background-color: #666666;
+  border-width: 0;
+  height: 2px;
 }

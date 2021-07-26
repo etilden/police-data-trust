@@ -1,14 +1,15 @@
-// import styles from './viewer-account.module.css'
+import styles from './viewer-account.module.css'
 
 export default function ViewerAccount() {
-    // const { viewerAccount } = styles
+    const { profileType, textContent, verticalSpacing, viewerAccount } = styles
     return (
         <div>
-            <h1>Viewer Account</h1>
-            <h2>Profile Type</h2>
-            <p>A Viewer account allows you to see data that is publicly available</p>
-            <p>To apply to see legally protected data...</p>
-            <a>Register for a Passport Account</a>
+            <h1 className={ profileType }>Profile Type</h1>
+            <h2 className={ viewerAccount }>Viewer Account</h2>
+            <p className={ textContent }>
+                A Viewer account allows you to see data that is publicly available.<br />To apply to see legally protected data...
+            </p>
+            <a className={ verticalSpacing } href="javascript:void(0)">Register for a Passport Account</a>
         </div>
     )
 }

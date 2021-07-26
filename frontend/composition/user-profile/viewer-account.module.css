@@ -1,0 +1,20 @@
+.profileType {
+  color: #7caed7;
+  font-size: 1.5rem;
+}
+
+.textContent {
+  font-size: 0.9rem;
+}
+
+.verticalSpacing {
+  font-size: 0.9rem;
+  line-height: 3rem;
+}
+
+.viewerAccount {
+  color: #303463;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}

@@ -2,9 +2,9 @@ import styles from './user-profile.module.css'
 import { AccountPanel, SavedPanel } from "./index";
 
 export default function UserProfile() {
-	const { header, accountPanel, savedPanel, userProfile, theWholeDangThing } = styles
+	const { header, userProfile } = styles
 	return (
-		<div className={theWholeDangThing}>
+		<>
 			<p className={header} >
 				Header :) 
 			</p>
@@ -12,6 +12,6 @@ export default function UserProfile() {
 				<AccountPanel />
 				<SavedPanel />
 			</div>
-		</div>
+		</>
 	)
 }

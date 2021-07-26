@@ -4,6 +4,7 @@ import { EnrollmentInputNames, enrollmentValidation } from './enrollment-input'
 import { tooltipContent, TooltipTypes } from './info-tooltip'
 import { passwordToggleViews } from './password-aid'
 import { states } from './state-select'
+import { IUserInformation, UserInformationFormElements } from './user-information'
 
 export {
   AppRoutes,
@@ -14,5 +15,7 @@ export {
   passwordToggleViews,
   tooltipContent,
   TooltipTypes,
+  IUserInformation,
+  UserInformationFormElements,
   states
 }
