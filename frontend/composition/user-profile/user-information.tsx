@@ -1,8 +1,7 @@
-import _ from 'lodash';
 import { useState } from 'react'
 
 import styles from './user-information.module.css'
-import { IUserInformation, UserInformationFormElements } from '../../models/index'
+import { UserInformationFormElements } from '../../models/index'
 
 const defaultFirstName: string = 'Bob'
 const defaultLastName: string = 'Boberton'
@@ -27,16 +26,12 @@ export default function UserInformation() {
     const [phoneNumber, setPhoneNumber] = useState(defaultPhoneNumber)
     const [emailAddress, setEmailAddress] = useState(defaultEmailAddress)
     const [password, setPassword] = useState(defaultPassword)
-
-    let stateSnapshot: IUserInformation = { firstName, lastName, phoneNumber, emailAddress, password }
+    const [initialUserInfo, setInitialUserInfo] = useState({ firstName, lastName, phoneNumber, emailAddress, password })
 
     const securePassword = (): string => defaultPassword.split('').map(c => '*').join('');
 
     const toggleEditStatus = (): void => { 
-        console.log(isEditing);
-        if (!isEditing) 
-            stateSnapshot = _.clone({ firstName, lastName, phoneNumber, emailAddress, password });
-
+        if (!isEditing) setInitialUserInfo({ firstName, lastName, phoneNumber, emailAddress, password });
         setIsEditing(!isEditing) 
     }
 
@@ -45,18 +40,16 @@ export default function UserInformation() {
     }
 
     const cancelChanges = (): void => {
-        setFirstName(stateSnapshot.firstName)
-        setLastName(stateSnapshot.lastName)
-        setPhoneNumber(stateSnapshot.phoneNumber)
-        setEmailAddress(stateSnapshot.emailAddress)
-        setPassword(stateSnapshot.password)
+        setFirstName(initialUserInfo.firstName)
+        setLastName(initialUserInfo.lastName)
+        setPhoneNumber(initialUserInfo.phoneNumber)
+        setEmailAddress(initialUserInfo.emailAddress)
+        setPassword(initialUserInfo.password)
 
         toggleEditStatus()
     }
 
     const updateValue = (stateElement: UserInformationFormElements, newValue: string): void => {
-        console.log(stateSnapshot)
-
         switch (stateElement) {
             case UserInformationFormElements.firstName: 
                 setFirstName(newValue); 
